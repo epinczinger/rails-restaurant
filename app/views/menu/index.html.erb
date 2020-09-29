@@ -1,0 +1,13 @@
+<h1>Menu</h1>
+
+
+<ul class="nav">
+      <% @sections.each do |section| %>
+  <li class="nav-item">
+      <%= link_to(section.name, menu_path(section: section.name),
+             class:"nav-link #{'btn-primary' if params[:section] == section.name}") %>
+  </li>
+    <% end %>
+  </ul>
+
+
